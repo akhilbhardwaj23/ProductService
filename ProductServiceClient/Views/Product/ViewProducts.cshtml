@@ -1,0 +1,35 @@
+﻿@model IEnumerable<ProductServiceClient.Models.ProductModel.Product>
+
+@{
+    ViewBag.Title = "ViewProducts";
+}
+
+<h2>ViewProducts</h2>
+
+
+
+<table class="table">
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Users)
+            </td>
+        </tr>
+    }
+
+</table>
+
